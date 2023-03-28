@@ -13,13 +13,20 @@ const routes:RouteRecordRaw[]=[
         component:()=>import("@/pages/login/login.vue")
     },
     {
-        name:'home',
-        path:'/home',
-        component:()=>import("@/pages/home/home.vue")
-    },
-    {
+        name:'layout',
         path:'/',
-        redirect:'/login'
+        component:()=>import("@/pages/layout/index.vue"),
+        children:[
+            {
+                name:'home',
+                path:'/home',
+                component:()=>import("@/pages/home/home.vue")
+            },
+            {
+                path:'/',
+                redirect:'/home'
+            },
+        ]
     }
 ]
 export default routes
