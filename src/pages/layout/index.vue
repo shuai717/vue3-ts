@@ -2,7 +2,7 @@
   <div class="layout">
     <el-container>
       <el-header class="headerWrap">
-
+        <Header />
       </el-header>
       <el-main class="mainWrap">
         <router-view></router-view>
@@ -13,5 +13,6 @@
 </template>
 
 <script lang="ts" setup>
+import Header from '@/components/Header/index.vue'
 import './index.less'
 </script>
