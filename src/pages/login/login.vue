@@ -39,7 +39,7 @@ const form = reactive({
   password: "",
   catch: "",
 });
-const onSubmit: Function = (e: Event): void => {
+const onSubmit = (e: Event): void => {
   //收集信息 发送后台 ，登录成功 form
   localStorage.setItem('online','1')
   router.push("/home");
