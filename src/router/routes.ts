@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import {RouteRecordRaw} from 'vue-router'
-interface route {
+interface route <T>{
  path:string,
  component?:Vue.Component,
  redirect?:string
- name?:string   
+ name?:string
+ children?:T[]   
 }
 const routes=[
     {
@@ -35,7 +35,7 @@ const routes=[
                         name:'注册',
                         path:'/user/register',
                         key:'register',
-                        component:()=>import("@/pages/user/register/index.vue")
+                        component:()=>import("@/pages/user/register/index.vue"),
                     },
                     {
                         path:'/user',
