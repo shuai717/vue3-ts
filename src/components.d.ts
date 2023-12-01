@@ -28,6 +28,7 @@ declare module '@vue/runtime-core' {
     ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     Header: typeof import('./components/Header/index.vue')['default']
+    LoginForm: typeof import('./components/loginForm/index.vue')['default']
     Menu: typeof import('./components/Menu/index.vue')['default']
     RightMenu: typeof import('./components/RightMenu/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
